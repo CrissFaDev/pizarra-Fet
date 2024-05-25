@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Node js</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      canvas {
+        border: 2px solid #333;
+        background-color: #fff;
+        cursor: crosshair;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .color-option {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+        cursor: pointer;
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="limpiarPizarra()">Limpiar</button>
+    <canvas id="drawing"></canvas>
+
+    <!-- Agregar opciones de color -->
+    <div id="color-options">
+      <div
+        class="color-option"
+        id="black"
+        style="background-color: black"
+        onclick="changeColor('black')"
+      ></div>
+      <div
+        class="color-option"
+        id="red"
+        style="background-color: red"
+        onclick="changeColor('red')"
+      ></div>
+      <div
+        class="color-option"
+        id="blue"
+        style="background-color: blue"
+        onclick="changeColor('blue')"
+      ></div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
